@@ -38,7 +38,7 @@ const CURATED_IMAGE_ASSETS = [
     id: 'img-honey',
     name: 'সুন্দরবনের খাঁটি মধু',
     englishName: 'Raw Sundarban Wild Honey',
-    url: '/src/assets/images/product_sundarban_honey_1792210009913.jpg',
+    url: '/images/product_sundarban_honey_1792210009913.jpg',
     category: 'honey-gur',
     desc: 'প্রাকৃতিক চাকের কাঁচা মধু',
   },
@@ -46,7 +46,7 @@ const CURATED_IMAGE_ASSETS = [
     id: 'img-mustard',
     name: 'কাঠের ঘানি ভাঙা সরিষার তেল',
     englishName: 'Cold-Pressed Mustard Oil (Kachi Ghani)',
-    url: '/src/assets/images/product_mustard_oil_1792210009988.jpg',
+    url: '/images/product_mustard_oil_1792210009988.jpg',
     category: 'ghee-oils',
     desc: 'গাঢ় ঝাঁঝালো খাঁটি সরিষার তেল',
   },
@@ -54,7 +54,7 @@ const CURATED_IMAGE_ASSETS = [
     id: 'img-ghee',
     name: 'গাওয়া দেশি দানাদার ঘি',
     englishName: 'Artisanal Desi Cow Ghee',
-    url: '/src/assets/images/product_desi_ghee_1792210011314.jpg',
+    url: '/images/product_desi_ghee_1792210011314.jpg',
     category: 'ghee-oils',
     desc: 'সিরাজগঞ্জের মাঠা থেকে তৈরি গাওয়া ঘি',
   },
@@ -62,7 +62,7 @@ const CURATED_IMAGE_ASSETS = [
     id: 'img-rice',
     name: 'সুগন্ধি চিনিগুড়া পোলাও চাল',
     englishName: 'Chinigura Kalijira Aromatic Rice',
-    url: '/src/assets/images/product_kalijira_rice_1792210009975.jpg',
+    url: '/images/product_kalijira_rice_1792210009975.jpg',
     category: 'rice-pulses',
     desc: 'উন্নত জাতের সুবাসিত ছোট দানা চাল',
   },
@@ -70,7 +70,7 @@ const CURATED_IMAGE_ASSETS = [
     id: 'img-kalijira-oil',
     name: 'কালোজিরা তেল (কোল্ড প্রেসড)',
     englishName: 'Pure Cold-Pressed Black Seed Oil',
-    url: '/src/assets/images/product_kalijira_oil_1792212645927.jpg',
+    url: '/images/product_kalijira_oil_1792212645927.jpg',
     category: 'ghee-oils',
     desc: 'শতভাগ বিশুদ্ধ ও ভেষজ গুণসম্পন্ন তেল',
   },
@@ -78,7 +78,7 @@ const CURATED_IMAGE_ASSETS = [
     id: 'img-turmeric',
     name: 'রোদে শুকানো খাঁটি হলুদ গুঁড়া',
     englishName: 'Pure Sun-Dried Turmeric Powder',
-    url: '/src/assets/images/product_turmeric_powder_1792212662242.jpg',
+    url: '/images/product_turmeric_powder_1792212662242.jpg',
     category: 'spices',
     desc: 'কেমিক্যালমুক্ত খাঁটি দেশি হলুদ গুঁড়া',
   },
@@ -927,7 +927,7 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({ onBackToStore })
               <button
                 onClick={() => {
                   setEditingProduct(null);
-                  setPrefilledImageForNewProduct('/src/assets/images/product_sundarban_honey_1792210009913.jpg');
+                  setPrefilledImageForNewProduct('/images/product_sundarban_honey_1792210009913.jpg');
                   setShowAddProductModal(true);
                 }}
                 className="flex items-center gap-1.5 px-4 py-2 bg-[#143d2b] hover:bg-[#1a4e37] text-white text-xs font-bold rounded-lg transition-colors cursor-pointer shadow-xs whitespace-nowrap"
@@ -1357,17 +1357,17 @@ const ProductFormModal: React.FC<ProductFormModalProps> = ({
   const [sourceLocation, setSourceLocation] = useState(product?.sourceLocation || 'সুন্দরবন, সাতক্ষীরা');
   const [description, setDescription] = useState(product?.description || '');
   const [image, setImage] = useState(
-    product?.image || initialImage || '/src/assets/images/product_sundarban_honey_1792210009913.jpg'
+    product?.image || initialImage || '/images/product_sundarban_honey_1792210009913.jpg'
   );
   const [isSaving, setIsSaving] = useState(false);
 
   const availableImagePresets = [
-    { label: 'সুন্দরবনের মধু (Honey)', url: '/src/assets/images/product_sundarban_honey_1792210009913.jpg' },
-    { label: 'সরিষার তেল (Mustard Oil)', url: '/src/assets/images/product_mustard_oil_1792210009988.jpg' },
-    { label: 'গাওয়া দেশি ঘি (Desi Ghee)', url: '/src/assets/images/product_desi_ghee_1792210011314.jpg' },
-    { label: 'চিনিগুড়া চাল (Kalijira Rice)', url: '/src/assets/images/product_kalijira_rice_1792210009975.jpg' },
-    { label: 'কালোজিরা তেল (Kalijira Oil)', url: '/src/assets/images/product_kalijira_oil_1792212645927.jpg' },
-    { label: 'হলুদ গুঁড়া (Turmeric Powder)', url: '/src/assets/images/product_turmeric_powder_1792212662242.jpg' },
+    { label: 'সুন্দরবনের মধু (Honey)', url: '/images/product_sundarban_honey_1792210009913.jpg' },
+    { label: 'সরিষার তেল (Mustard Oil)', url: '/images/product_mustard_oil_1792210009988.jpg' },
+    { label: 'গাওয়া দেশি ঘি (Desi Ghee)', url: '/images/product_desi_ghee_1792210011314.jpg' },
+    { label: 'চিনিগুড়া চাল (Kalijira Rice)', url: '/images/product_kalijira_rice_1792210009975.jpg' },
+    { label: 'কালোজিরা তেল (Kalijira Oil)', url: '/images/product_kalijira_oil_1792212645927.jpg' },
+    { label: 'হলুদ গুঁড়া (Turmeric Powder)', url: '/images/product_turmeric_powder_1792212662242.jpg' },
   ];
 
   const handleSubmit = async (e: React.FormEvent) => {
