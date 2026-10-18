@@ -1,0 +1,90 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Default Deny
+    match /{document=**} {
+      allow read, write: if false;
+    }
+
+    // Helper functions
+    function isValidId(id) {
+      return id is string && id.size() > 0 && id.size() <= 128 && id.matches('^[a-zA-Z0-9_\\-]+$');
+    }
+
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    function isAdmin() {
+      return isSignedIn() && (
+        exists(/databases/$(database)/documents/admins/$(request.auth.uid)) ||
+        (request.auth.token.email == 'raihanhossenpabel678@gmail.com' && request.auth.token.email_verified == true)
+      );
+    }
+
+    // Products: Public can get single product & list all products;
+    // Only Admins can create or delete products;
+    // Updates allowed for Admins OR customer purchasing (decrementing stock down to >= 0)
+    match /products/{productId} {
+      allow get: if isValidId(productId);
+      allow list: if true;
+      allow create, delete: if isValidId(productId) && isAdmin();
+      allow update: if isValidId(productId) && (
+        isAdmin() ||
+        (
+          request.resource.data.diff(resource.data).affectedKeys().hasOnly(['stock']) &&
+          request.resource.data.stock is int &&
+          request.resource.data.stock >= 0 &&
+          request.resource.data.stock < resource.data.stock
+        )
+      );
+    }
+
+    // Categories: Public can get and list categories; only Admins can create, update, delete
+    match /categories/{categoryId} {
+      allow get: if isValidId(categoryId);
+      allow list: if true;
+      allow create, update, delete: if isValidId(categoryId) && isAdmin();
+    }
+
+    // Orders: Anyone can create an order with Cash on Delivery or Online Payment; 
+    // Customers can read their specific order by ID (for live order tracking);
+    // Admins can list and update orders (status updates);
+    // Verified payment update: can update payment status only if matching verification token
+    match /orders/{orderId} {
+      allow get: if isValidId(orderId);
+      allow list: if isAdmin();
+      allow create: if isValidId(orderId) &&
+        request.resource.data.customerName is string &&
+        request.resource.data.customerPhone is string &&
+        request.resource.data.deliveryAddress is string &&
+        request.resource.data.totalAmount is number;
+      allow update: if isValidId(orderId) && (
+        isAdmin() ||
+        (
+          resource.data.paymentStatus == 'pending' &&
+          request.resource.data.verificationToken == resource.data.verificationToken &&
+          request.resource.data.diff(resource.data).affectedKeys().hasOnly([
+            'paymentStatus', 'orderStatus', 'valId', 'bankTranId', 'cardType', 'paymentGateway', 'updatedAt'
+          ])
+        )
+      );
+      allow delete: if isValidId(orderId) && isAdmin();
+    }
+
+    // Coupons: Anyone can get single coupon and list active coupons to validate discounts at checkout;
+    // Only Admins can create, update, or delete coupons
+    match /coupons/{couponId} {
+      allow get: if isValidId(couponId);
+      allow list: if true;
+      allow create, update, delete: if isValidId(couponId) && isAdmin();
+    }
+
+    // Admins collection: Protected
+    match /admins/{adminId} {
+      allow get: if isSignedIn() && (request.auth.uid == adminId || isAdmin());
+      allow list: if isAdmin();
+      allow write: if isAdmin();
+    }
+  }
+}

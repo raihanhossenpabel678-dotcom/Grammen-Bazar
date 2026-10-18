@@ -1,0 +1,106 @@
+{
+  "entities": {
+    "Product": {
+      "title": "Product",
+      "description": "Natural and organic grocery product in Grameen Bazar",
+      "type": "object",
+      "properties": {
+        "name": { "type": "string", "maxLength": 150 },
+        "banglaName": { "type": "string", "maxLength": 150 },
+        "englishName": { "type": "string", "maxLength": 150 },
+        "slug": { "type": "string", "maxLength": 100 },
+        "category": { "type": "string", "maxLength": 80 },
+        "price": { "type": "number" },
+        "originalPrice": { "type": "number" },
+        "unit": { "type": "string", "maxLength": 40 },
+        "stock": { "type": "number" },
+        "image": { "type": "string", "maxLength": 500 },
+        "description": { "type": "string", "maxLength": 2000 },
+        "sourceLocation": { "type": "string", "maxLength": 100 },
+        "isFeatured": { "type": "boolean" },
+        "isBestSeller": { "type": "boolean" },
+        "rating": { "type": "number" },
+        "reviewsCount": { "type": "number" },
+        "createdAt": { "type": "string" }
+      },
+      "required": ["name", "category", "price", "stock", "unit"]
+    },
+    "Category": {
+      "title": "Category",
+      "description": "Product catalog category",
+      "type": "object",
+      "properties": {
+        "name": { "type": "string", "maxLength": 80 },
+        "banglaName": { "type": "string", "maxLength": 80 },
+        "slug": { "type": "string", "maxLength": 80 },
+        "icon": { "type": "string", "maxLength": 50 }
+      },
+      "required": ["name", "slug"]
+    },
+    "Order": {
+      "title": "Order",
+      "description": "Customer grocery order placed on Grameen Bazar",
+      "type": "object",
+      "properties": {
+        "orderNumber": { "type": "string", "maxLength": 32 },
+        "customerName": { "type": "string", "maxLength": 100 },
+        "customerPhone": { "type": "string", "maxLength": 20 },
+        "customerEmail": { "type": "string", "maxLength": 100 },
+        "deliveryAddress": { "type": "string", "maxLength": 300 },
+        "district": { "type": "string", "maxLength": 50 },
+        "deliveryArea": { "type": "string", "maxLength": 50 },
+        "deliveryFee": { "type": "number" },
+        "subtotal": { "type": "number" },
+        "discount": { "type": "number" },
+        "couponCode": { "type": "string", "maxLength": 30 },
+        "totalAmount": { "type": "number" },
+        "paymentMethod": { "type": "string", "maxLength": 50 },
+        "paymentStatus": { "type": "string", "maxLength": 30 },
+        "orderStatus": { "type": "string", "maxLength": 30 },
+        "tranId": { "type": "string", "maxLength": 80 },
+        "valId": { "type": "string", "maxLength": 80 },
+        "bankTranId": { "type": "string", "maxLength": 80 },
+        "cardType": { "type": "string", "maxLength": 50 },
+        "paymentGateway": { "type": "string", "maxLength": 50 },
+        "verificationToken": { "type": "string", "maxLength": 100 },
+        "specialInstructions": { "type": "string", "maxLength": 500 },
+        "createdAt": { "type": "string" },
+        "updatedAt": { "type": "string" },
+        "estimatedDelivery": { "type": "string", "maxLength": 50 }
+      },
+      "required": ["orderNumber", "customerName", "customerPhone", "deliveryAddress", "totalAmount", "orderStatus"]
+    },
+    "Coupon": {
+      "title": "Coupon",
+      "description": "Promotional discount voucher",
+      "type": "object",
+      "properties": {
+        "code": { "type": "string", "maxLength": 30 },
+        "discountType": { "type": "string", "enum": ["percentage", "fixed"] },
+        "discountValue": { "type": "number" },
+        "minSpend": { "type": "number" },
+        "validUntil": { "type": "string", "maxLength": 40 },
+        "isActive": { "type": "boolean" }
+      },
+      "required": ["code", "discountType", "discountValue", "isActive"]
+    }
+  },
+  "firestore": {
+    "/products/{productId}": {
+      "schema": { "$ref": "#/entities/Product" },
+      "description": "Catalog of organic grocery and pantry items"
+    },
+    "/categories/{categoryId}": {
+      "schema": { "$ref": "#/entities/Category" },
+      "description": "Catalog categories"
+    },
+    "/orders/{orderId}": {
+      "schema": { "$ref": "#/entities/Order" },
+      "description": "Customer purchase orders with Cash on Delivery status tracking"
+    },
+    "/coupons/{couponId}": {
+      "schema": { "$ref": "#/entities/Coupon" },
+      "description": "Promotional coupons for cart discounts"
+    }
+  }
+}

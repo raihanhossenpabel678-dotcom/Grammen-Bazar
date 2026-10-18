@@ -1,0 +1,8 @@
+{
+  "name": "Grameen Bazar",
+  "description": "Authentic Bangladeshi natural and organic online grocery store offering pure Sundarban honey, cold-pressed mustard oil, organic ghee, aromatic rice, spices, and fresh farm staples with Cash on Delivery across Bangladesh.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
