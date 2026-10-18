@@ -1,12 +1,8 @@
 {
-  "projectId": "fixlocal-r",
-  "appId": "1:599341101816:web:474d5cd957f7313720410d",
-  "apiKey": "AIzaSyA7EK26yff9EQ681oJRXPh7IoWOM-EUyvo",
-  "authDomain": "fixlocal-r.firebaseapp.com",
-  "firestoreDatabaseId": "ai-studio-grameenbazar-10dac838-23ff-444b-9789-04061482f484",
-  "storageBucket": "fixlocal-r.firebasestorage.app",
-  "messagingSenderId": "599341101816",
-  "measurementId": "",
-  "oAuthClientId": "599341101816-ngns063avkqhbbfgkn9vihl02qscl52n.apps.googleusercontent.com",
-  "recaptchaSiteKey": ""
+  "apiKey": "AIzaSyDg5FvVWljfV5_qB_JS8aYGxuXdW8T6xqM",
+  "authDomain": "e-commerce-raihan.firebaseapp.com",
+  "projectId": "e-commerce-raihan",
+  "storageBucket": "e-commerce-raihan.firebasestorage.app",
+  "messagingSenderId": "567889066667",
+  "appId": "1:567889066667:web:0c6a3ba7bba919b0ead5ee"
 }

@@ -1,6 +1,6 @@
 import { Product, Category, Coupon, Order } from '../types';
 
-export const HERO_BANNER_IMAGE = '/src/assets/images/hero_grameen_harvest_1792210009190.jpg';
+export const HERO_BANNER_IMAGE = '/images/hero_grameen_harvest_1792210009190.jpg';
 
 export const INITIAL_CATEGORIES: Category[] = [
   { id: 'cat-all', name: 'All Products', banglaName: 'সব পণ্য', slug: 'all', itemCount: 12 },
@@ -23,7 +23,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     originalPrice: 920,
     unit: '500 গ্রাম (Jar)',
     stock: 45,
-    image: '/src/assets/images/product_sundarban_honey_1792210009913.jpg',
+    image: '/images/product_sundarban_honey_1792210009913.jpg',
     description: 'সাতক্ষীরার সুন্দরবন উপকূলের মৌয়ালদের কাছ থেকে সরাসরি সংগৃহীত প্রাকৃতিক চাকের অপরিশোধিত মধু। কোনো কৃত্রিম প্রিজারভেটিভ বা মিষ্টি নেই। প্রাকৃতিকভাবে অ্যান্টিঅক্সিডেন্ট ও এনজাইম সমৃদ্ধ।',
     benefits: [
       '১০০% প্রাকৃতিক চাকের অপরিশোধিত বুনো মধু',
@@ -49,7 +49,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     originalPrice: 420,
     unit: '১ লিটার (Glass Bottle)',
     stock: 60,
-    image: '/src/assets/images/product_mustard_oil_1792210009988.jpg',
+    image: '/images/product_mustard_oil_1792210009988.jpg',
     description: 'কাঠের ঘানিতে ধীর গতিতে পেষণকৃত ১০০% প্রাকৃতিক দেশি মাঘী সরিষার তেল। এর ঝাঁঝ ও প্রাকৃতিক পুষ্টিগুণ অক্ষুণ্ণ থাকে। রান্নায় ঐতিহ্যবাহী বাঙালি স্বাদ ও স্বাস্থ্যের জন্য অনন্য।',
     benefits: [
       'কাঠের ঘানিতে ঠান্ডা চাপে নিষ্কাশিত (Cold-Pressed)',
@@ -75,7 +75,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     originalPrice: 1050,
     unit: '৪৫০ গ্রাম (Glass Jar)',
     stock: 28,
-    image: '/src/assets/images/product_desi_ghee_1792210011314.jpg',
+    image: '/images/product_desi_ghee_1792210011314.jpg',
     description: 'ঘাস খাওয়া দেশি গাভীর খাঁটি বাটার থেকে প্রস্তুতকৃত প্রথাগত দানাদার গাওয়া ঘি। মুখে দিলে সুস্বাদু সুবাস ও অপূর্ব বাঙালি মিষ্টান্ন বা গরম ভাতের স্বাদ আনে।',
     benefits: [
       'শতভাগ দেশি গরুর দুধের ননী থেকে তৈরি',
@@ -101,7 +101,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     originalPrice: 190,
     unit: '১ কেজি (Jute Pack)',
     stock: 120,
-    image: '/src/assets/images/product_kalijira_rice_1792210009975.jpg',
+    image: '/images/product_kalijira_rice_1792210009975.jpg',
     description: 'দিনাজপুরের উর্বর পলল ভূমিতে উৎপন্ন বিখ্যাত সুগন্ধি ছোট দানার চিনিগুড়া চাল। পোলাও, বিরিয়ানি ও পায়েসের জন্য সেরা পছন্দ। রান্না করার সাথে সাথে পুরো বাড়ি সুবাসে ভরে যায়।',
     benefits: [
       'দিনাজপুরের খাঁটি পুরাতন ফসলের চাল',
@@ -127,7 +127,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     originalPrice: 490,
     unit: '১ কেজি (Food Grade Jar)',
     stock: 35,
-    image: '/src/assets/images/product_sundarban_honey_1792210009913.jpg',
+    image: '/images/product_sundarban_honey_1792210009913.jpg',
     description: 'যশোরের শীতের ভোরের তাজা খেজুর রস মাটির চুলায় নিপুণভাবে জ্বাল দিয়ে প্রস্তুত ১০০% কেমিক্যালমুক্ত আসল নলেন গুড়। পিঠা-পায়েসের আসল প্রাণ।',
     benefits: [
       'কোনোরকম চিনি বা ফিটকিরি ছাড়া তৈরি',
@@ -152,7 +152,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     originalPrice: 380,
     unit: '১০০ মিলি (Amber Glass Bottle)',
     stock: 50,
-    image: '/src/assets/images/product_mustard_oil_1792210009988.jpg',
+    image: '/images/product_mustard_oil_1792210009988.jpg',
     description: 'সর্ব রোগের মহৌষধ হিসেবে পরিচিত সেরা মানের কালোজিরা কোল্ড প্রেস করে সংগৃহীত নির্যাস। থাইমোকুইনোন সমৃদ্ধ যা শরীরের রোগ প্রতিরোধ ব্যবস্থার প্রাকৃতিক ঢাল।',
     benefits: [
       '১০০% খাঁটি দেশি প্রথম চাপ কোল্ড প্রেসড নির্যাস',
@@ -177,7 +177,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     originalPrice: 1100,
     unit: '৫০০ গ্রাম (Hexagon Jar)',
     stock: 18,
-    image: '/src/assets/images/product_sundarban_honey_1792210009913.jpg',
+    image: '/images/product_sundarban_honey_1792210009913.jpg',
     description: 'সুন্দরবনের সবচেয়ে দুর্লভ ও বহুমুখী খলিশা ফুলের মধু। এর হালকা সোনালী বর্ণ এবং অতুলনীয় মৃদু সুবাস বিশ্ববিখ্যাত। সীমিত মৌসুমি স্টক।',
     benefits: [
       'সুন্দরবনের প্রথম মৌসুমের সেরা মানের খলিশা মধু',
@@ -202,7 +202,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     originalPrice: 180,
     unit: '২০০ গ্রাম (Eco Pack)',
     stock: 80,
-    image: '/src/assets/images/product_mustard_oil_1792210009988.jpg',
+    image: '/images/product_mustard_oil_1792210009988.jpg',
     description: 'পাহাড়ি মাটির অর্গানিক কাঁচা হলুদ রোদে শুকিয়ে নিজস্ব তত্ত্বাবধানে চূর্ণকৃত। কোনো প্রকার রঙ বা ভেজাল নেই। তরকারিতে আনে উজ্জ্বল সোনালী বর্ণ ও ঔষধি কারকিউমিন।',
     benefits: [
       'উচ্চমাত্রার কারকিউমিন (Curcumin) সমৃদ্ধ',
@@ -227,7 +227,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     originalPrice: 210,
     unit: '১ কেজি (Sealed Bag)',
     stock: 90,
-    image: '/src/assets/images/product_kalijira_rice_1792210009975.jpg',
+    image: '/images/product_kalijira_rice_1792210009975.jpg',
     description: 'দেশি চাষিদের খামারের লাল রঙের ছোট দানার মসুর ডাল। অল্প আঁচে রান্না করলেই চমৎকার গলে গিয়ে ঐতিহ্যবাহী বাঙালির ডাল-ভাতের আসল স্বাদ এনে দেয়।',
     benefits: [
       'উচ্চ প্রোটিন ও ফাইবার সমৃদ্ধ খাদ্যগুণ',
@@ -252,7 +252,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     originalPrice: 680,
     unit: '২৫০ গ্রাম (Air-tight Jar)',
     stock: 35,
-    image: '/src/assets/images/product_desi_ghee_1792210011314.jpg',
+    image: '/images/product_desi_ghee_1792210011314.jpg',
     description: 'রোস্টেড আস্ত কাজুবাদাম, ইরানিয়ান পেস্তাবাদাম ও আখরোটের সমন্বয়ে তৈরি দৈনিক পুষ্টির সুপারফুড প্যাক। সকালের নাস্তা বা স্ন্যাক্সে স্বাস্থ্যকর শক্তির উৎস।',
     benefits: [
       'হৃদযন্ত্র ও মস্তিষ্কের স্বাস্থ্যের জন্য প্রয়োজনীয় ভিটামিন ও জিঙ্ক',
@@ -277,7 +277,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     originalPrice: 350,
     unit: '২০০ গ্রাম (Pouch)',
     stock: 65,
-    image: '/src/assets/images/product_kalijira_rice_1792210009975.jpg',
+    image: '/images/product_kalijira_rice_1792210009975.jpg',
     description: 'ওজন নিয়ন্ত্রণ ও দৈনন্দিন শক্তি জোগাতে উচ্চমানের অর্গানিক চিয়া সিড। পানিতে ভিজিয়ে বা লেবু-মধুর সাথে মিশিয়ে খাওয়া যায়। ডায়েটের জন্য আদর্শ।',
     benefits: [
       'প্রচুর পরিমাণে ওমেগা-৩ ও ডায়েটরি ফাইবার',
@@ -302,7 +302,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     originalPrice: 190,
     unit: '২০০ গ্রাম (Eco Pack)',
     stock: 75,
-    image: '/src/assets/images/product_mustard_oil_1792210009988.jpg',
+    image: '/images/product_mustard_oil_1792210009988.jpg',
     description: 'বগুড়ার চরাঞ্চলের বাছাইকৃত ঝাল মরিচ ডাটা ছাড়িয়ে প্রাকৃতিকভাবে রোদে শুকিয়ে প্রস্তুত। কোনো কৃত্রিম লাল রঙ বা ইটগুঁড়া নেই। খাঁটি রঙ ও ঝাল।',
     benefits: [
       'বগুড়ার চরের সেরা ঝাল মরিচ থেকে তৈরি',
@@ -369,7 +369,7 @@ export const INITIAL_ORDERS: Order[] = [
         price: 780,
         quantity: 1,
         unit: '500 গ্রাম (Jar)',
-        image: '/src/assets/images/product_sundarban_honey_1792210009913.jpg'
+        image: '/images/product_sundarban_honey_1792210009913.jpg'
       },
       {
         productId: 'prod-desi-ghee',
@@ -377,7 +377,7 @@ export const INITIAL_ORDERS: Order[] = [
         price: 890,
         quantity: 1,
         unit: '৪৫০ গ্রাম (Glass Jar)',
-        image: '/src/assets/images/product_desi_ghee_1792210011314.jpg'
+        image: '/images/product_desi_ghee_1792210011314.jpg'
       }
     ],
     subtotal: 1670,
@@ -409,7 +409,7 @@ export const INITIAL_ORDERS: Order[] = [
         price: 360,
         quantity: 2,
         unit: '১ লিটার (Glass Bottle)',
-        image: '/src/assets/images/product_mustard_oil_1792210009988.jpg'
+        image: '/images/product_mustard_oil_1792210009988.jpg'
       },
       {
         productId: 'prod-kalijira-rice',
@@ -417,7 +417,7 @@ export const INITIAL_ORDERS: Order[] = [
         price: 165,
         quantity: 3,
         unit: '১ কেজি (Jute Pack)',
-        image: '/src/assets/images/product_kalijira_rice_1792210009975.jpg'
+        image: '/images/product_kalijira_rice_1792210009975.jpg'
       }
     ],
     subtotal: 1215,
@@ -448,7 +448,7 @@ export const INITIAL_ORDERS: Order[] = [
         price: 950,
         quantity: 1,
         unit: '৫০০ গ্রাম (Hexagon Jar)',
-        image: '/src/assets/images/product_sundarban_honey_1792210009913.jpg'
+        image: '/images/product_sundarban_honey_1792210009913.jpg'
       }
     ],
     subtotal: 950,
@@ -477,7 +477,7 @@ export const INITIAL_ORDERS: Order[] = [
         price: 890,
         quantity: 2,
         unit: '৪৫০ গ্রাম (Glass Jar)',
-        image: '/src/assets/images/product_desi_ghee_1792210011314.jpg'
+        image: '/images/product_desi_ghee_1792210011314.jpg'
       }
     ],
     subtotal: 1780,
